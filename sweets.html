@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sweet Shop</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Indian Sweet Shop</h1>
+    <form action="/add" method="POST">
+        <input name="name" placeholder="Sweet Name" required>
+        <input name="category" placeholder="Category" required>
+        <input name="price" placeholder="Price" type="number" required>
+        <input name="quantity" placeholder="Qty" type="number" required>
+        <button type="submit">Add Sweet</button>
+    </form>
+    <hr>
+    <table>
+        <tr><th>ID</th><th>Name</th><th>Category</th><th>Price</th><th>Qty</th></tr>
+        {% for sweet in sweets %}
+        <tr>
+            <td>{{ sweet['id'] }}</td>
+            <td>{{ sweet['name'] }}</td>
+            <td>{{ sweet['category'] }}</td>
+            <td>{{ sweet['price'] }}</td>
+            <td>{{ sweet['quantity'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

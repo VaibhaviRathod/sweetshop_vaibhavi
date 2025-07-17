@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+    background-color: #fff7e6;
+    padding: 20px;
+}
+h1 {
+    color: #b35c00;
+}
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-collapse: collapse;
+}
+input, button {
+    padding: 5px;
+    margin: 5px;
+}
